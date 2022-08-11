@@ -12,7 +12,7 @@ int prompt(void)
 
 	if (isatty(STDIN_FILENO) == 1)
 	{
-		wrutecount = write(STDOUT_FILENO, prompt, 2);
+		writecount = write(STDOUT_FILENO, prompt, 2);
 		if (writecount == -1)
 			exit(0);
 	}
@@ -71,7 +71,7 @@ char *_fullpathbuffer(char *av, char *PATH, char *copy)
 	tok = strtok(copy, ": =");
 	while (tok != NULL)
 	{
-		concastr = _concat(tmp, av, tok);
+		concatstr = _concat(tmp, av, tok);
 		if (stat(concatstr, &h) == 0)
 		{
 			fullpathbuffer = concatstr;
