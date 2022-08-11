@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <fctl.h>
+#include <fcntl.h>
 #include <string.h>
 #include <signal.h>
 
